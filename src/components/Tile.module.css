@@ -1,0 +1,34 @@
+
+.tile {
+    display: grid;
+    place-items: center;
+    width: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 10px solid teal;
+    background-color: paleturquoise;
+    margin-left: 10%;
+    margin-top: 10%;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+  }
+  
+  .buttons {
+    grid-template-columns: 1fr;
+    grid-column: 1 / -1;
+  }
+  
+  .buttons > * {
+    appearance: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: springgreen;
+    grid-gap: 0.5rem;
+  }
+  
+  .buttons > *:hover {
+    background-color:steelblue;
+    cursor: pointer;
+  }

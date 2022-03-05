@@ -1,5 +1,11 @@
+import Tile from "./components/Tile";
+
 function App() {
-  return <div>Hello!</div>;
+  return(
+    <div>
+      <Tile />
+    </div>
+  );
 }
 
 export default App;
