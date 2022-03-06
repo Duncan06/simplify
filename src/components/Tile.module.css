@@ -7,28 +7,38 @@
     grid-template-rows: 1fr 1fr;
     border: 10px solid teal;
     background-color: paleturquoise;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin: 5% 5% 7.5% 5%;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
   }
   
   .buttons {
-    grid-template-columns: 1fr;
-    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1fr;
+    grid-gap: 0.5rem;
   }
   
   .buttons > * {
     appearance: none;
     border: none;
-    font-size: 1.5rem;
-    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    padding: .5rem;
+    margin: 0 .5rem 0 .5rem;
     margin-bottom: .5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: springgreen;
-    grid-gap: 0.5rem;
+    border-radius: 10%;
   }
   
   .buttons > *:hover {
     background-color:steelblue;
     cursor: pointer;
+  }
+
+  .buttons > *:active {
+    background-color:steelblue;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+     outline: none;
   }
