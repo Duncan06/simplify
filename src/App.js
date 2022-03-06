@@ -10,7 +10,9 @@ function App() {
       <div className={main.sections}>
         <Tile />
         <Tile2 />
-        <Tile3 />
+        <div className={main.sections3}>
+          <Tile3 />
+        </div>
       </div>
     </body>
   );
