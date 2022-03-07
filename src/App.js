@@ -6,15 +6,13 @@ import Tile4 from "./components/Tile4";
 
 function App() {
   return(
-    <body>
-      <div className={main.sections}>
-        <Tile />
-        <Tile2 />
-        <div className={main.sections3}>
-          <Tile3 />
-        </div>
+    <div className={main.sections}>
+      <Tile />
+      <Tile2 />
+      <div className={main.sections3}>
+        <Tile3 />
       </div>
-    </body>
+    </div>
   );
 }
 
