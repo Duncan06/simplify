@@ -5,22 +5,36 @@ function Tile(props) {
   const [changeGreen, setChangeGreen] = useState(false);
   const [changeYellow, setChangeYellow] = useState(false);
   const [changeRed, setChangeRed] = useState(false);
+  const [currentTile, setCurrentTile] = useState(classes.tile);
 
   function tileOneClick() {
-    let className = 'classes.tile';
     if (changeGreen) {
+      return setCurrentTile(classes.green)
     } else if (changeYellow) {
+
     } else if (changeRed) {
-    } else {
-      return className;
-    }
+
+    } 
+  }
+
+  function nowGreen() {
+    setChangeGreen(true);
+    tileOneClick();
+  }
+
+  function nowYellow() {
+    setChangeYellow = true;
+  }
+
+  function nowRed() {
+    setChangeRed = true;
   }
 
   return (
-    <div className={tileOneClick}>
+    <div className={currentTile}>
       <h3>How's it going?</h3>
       <div className={classes.buttons}>
-        <button onClick={classes.tileGreen}>Well!</button>
+        <button onClick={nowGreen}>Well!</button>
         <button>I don't know.</button>
         <button>Not so great.</button>
       </div>
