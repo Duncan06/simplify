@@ -1,18 +1,18 @@
 :root {
-    --tile-color2: #00f5c0;
+  --tile-color2: #00f5c0;
 }
 
 .tile {
-    display: grid;
-    place-items: center;
-    width: 400px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    border: 10px solid #21b9be;
-    background-color: var(--tile-color2);
-    transition: 1s ease-in;
-    border-radius: 0% 7.5% 0% 7.5%;
-    margin: 3% 5% 7.5% 3%;
-    box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+  grid-column: 1;
+  grid-row: 4/5;
+  display: grid;
+  place-items: center;
+  width: 400px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 10px solid #21b9be;
+  background-color: var(--tile-color2);
+  transition: 1s ease-in;
+  border-radius: 0% 7.5% 0% 7.5%;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
 }
-  

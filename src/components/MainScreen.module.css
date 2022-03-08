@@ -1,0 +1,14 @@
+.backDrop {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    border: 10px solid black;
+    width: 700px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--tile-color);
+    transition: 1s ease-in;
+    border-radius: 0% 7.5% 0% 7.5%;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+}
