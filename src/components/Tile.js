@@ -1,42 +1,37 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import classes from "./Tile.module.css";
 
-function Tile(props) {
-  const [changeGreen, setChangeGreen] = useState(false);
-  const [changeYellow, setChangeYellow] = useState(false);
-  const [changeRed, setChangeRed] = useState(false);
-  const [currentTile, setCurrentTile] = useState(classes.tile);
+function Tile() {
+  useEffect(() => {
+    const color = getComputedStyle(document.documentElement).getPropertyValue(
+      "--tile-color"
+    );
+    console.log(color);
+  }, []);
 
-  function tileOneClick() {
-    if (changeGreen) {
-      return setCurrentTile(classes.green)
-    } else if (changeYellow) {
-
-    } else if (changeRed) {
-
-    } 
+  function setColor(color) {
+    document.documentElement.style.setProperty("--tile-color", color);
   }
 
-  function nowGreen() {
-    setChangeGreen(true);
-    tileOneClick();
+  function changeGreen() {
+    setColor("green");
   }
 
-  function nowYellow() {
-    setChangeYellow = true;
+  function changeYellow() {
+    setColor("yellow");
   }
 
-  function nowRed() {
-    setChangeRed = true;
+  function changeRed() {
+    setColor("red");
   }
 
   return (
-    <div className={currentTile}>
+    <div className={classes.tile}>
       <h3>How's it going?</h3>
       <div className={classes.buttons}>
-        <button onClick={nowGreen}>Well!</button>
-        <button>I don't know.</button>
-        <button>Not so great.</button>
+        <button onClick={changeGreen}>Well!</button>
+        <button onClick={changeYellow}>I don't know.</button>
+        <button onClick={changeRed}>Not so great.</button>
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+:root {
+  --tile-color: #00f5c0;
+}
+
 .tile {
   display: grid;
   place-items: center;
@@ -5,7 +9,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   border: 10px solid #21b9be;
-  background-color: #00f5c0;
+  background-color: var(--tile-color);
   border-radius: 0% 7.5% 0% 7.5%;
   margin: 3% 5% 7.5% 3%;
   box-shadow: 0 0 13px rgba(0, 0, 0, .5);
@@ -49,15 +53,6 @@
 }
 
 .tileGreen {
-  display: grid;
-  place-items: center;
-  width: 400px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  border: 10px solid #21b9be;
-  border-radius: 0% 7.5% 0% 7.5%;
-  margin: 3% 5% 7.5% 3%;
-  box-shadow: 0 0 13px rgba(0, 0, 0, .5);
   background-color: green;
   transition: .3s ease-in;
 }
