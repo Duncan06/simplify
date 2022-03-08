@@ -10,6 +10,7 @@
     grid-template-rows: 1fr 1fr;
     border: 10px solid #21b9be;
     background-color: var(--tile-color3);
+    transition: 1s ease-in;
     border-radius: 0% 7.5% 0% 7.5%;
     margin: 3% 5% 7.5% 3%;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);

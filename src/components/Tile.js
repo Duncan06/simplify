@@ -6,7 +6,6 @@ function Tile() {
     const color = getComputedStyle(document.documentElement).getPropertyValue(
       "--tile-color"
     );
-    console.log(color);
   }, []);
 
   function setColor(color) {
@@ -14,15 +13,15 @@ function Tile() {
   }
 
   function changeGreen() {
-    setColor("green");
+    setColor("#2afd22");
   }
 
-  function changeYellow() {
-    setColor("yellow");
+  function changeBlue() {
+    setColor("#22b8fd");
   }
 
   function changeRed() {
-    setColor("red");
+    setColor("#ff7aad");
   }
 
   return (
@@ -30,7 +29,7 @@ function Tile() {
       <h3>How's it going?</h3>
       <div className={classes.buttons}>
         <button onClick={changeGreen}>Well!</button>
-        <button onClick={changeYellow}>I don't know.</button>
+        <button onClick={changeBlue}>I don't know.</button>
         <button onClick={changeRed}>Not so great.</button>
       </div>
     </div>

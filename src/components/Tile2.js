@@ -15,13 +15,12 @@ function Tile2(props) {
   }
 
   function changeGreen() {
-    setColor("green");
+    setColor("#2afd22");
   }
 
   function changeRed() {
-    setColor("red");
+    setColor("#ff7aad");
   }
-
   return (
     <div className={tileBackground.tile}>
       <h3>How's it going?</h3>
