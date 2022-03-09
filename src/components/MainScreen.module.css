@@ -1,7 +1,6 @@
 .backDrop {
     grid-column: 2/3;
     grid-row: 2/4;
-    border: 10px solid black;
     width: 700px;
     height: 50%;
     display: grid;
