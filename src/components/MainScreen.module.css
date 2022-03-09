@@ -3,6 +3,7 @@
     grid-row: 2/4;
     border: 10px solid black;
     width: 700px;
+    height: 50%;
     display: grid;
     place-items: center;
     grid-template-columns: 1fr;
@@ -11,4 +12,13 @@
     transition: 1s ease-in;
     border-radius: 0% 7.5% 0% 7.5%;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+}
+
+.innerObject {
+    background-color: white;
+    width: 95%;
+    height: 90%;
+    grid-row: 1/4;
+    border-radius: .5% 7.5% .5% 7.5%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .7);
 }

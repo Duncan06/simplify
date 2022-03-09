@@ -4,7 +4,9 @@ import classes from "./MainScreen.module.css";
 function mainScreen() {
   return (
     <div className={classes.backDrop}>
-      <h3>Hey!</h3>
+      <div className={classes.innerObject}>
+        <p>Hey!</p>
+      </div>
     </div>
   );
 }
