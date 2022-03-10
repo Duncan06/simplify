@@ -13,10 +13,12 @@ function App() {
   function expandView() {
     if (expandedView == false) {
       setExpandedView(true);
-      document.documentElement.style.setProperty("--screen-height", "80%");
+      document.documentElement.style.setProperty("--screen-height", "130%");
+      document.documentElement.style.setProperty("--slide", "translate(0%, -20%)");
     } else {
       setExpandedView(false);
       document.documentElement.style.setProperty("--screen-height", "50%");
+      document.documentElement.style.setProperty("--slide", "translate(0%, 0%)");
     }
   }
 
