@@ -7,7 +7,6 @@ function Tile3(props) {
     const color = getComputedStyle(document.documentElement).getPropertyValue(
       "--tile-color"
     );
-    console.log(color);
   }, []);
 
   function setColor(color) {
