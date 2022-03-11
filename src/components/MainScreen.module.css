@@ -22,7 +22,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: var(--tile-color);
-  transition: 1.5s ease-in;
+  transition: 1.5s cubic-bezier(0.455, 0.3, 0.515, 0.955);
   border-radius: 0% 7.5% 0% 7.5%;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
 }
