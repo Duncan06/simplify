@@ -45,7 +45,6 @@
 
 .buttons > *:active, *:focus {
   background-color: #df46fd;
-  border: 2px solid #0057da;
   border-radius: 10%;
   -webkit-box-shadow: inset 0px 0px 10px #c1c1c1;
       -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
