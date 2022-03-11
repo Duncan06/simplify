@@ -11,7 +11,6 @@ function App() {
   const [tileOneHappy, setTileOneHappy] = useState(false);
   const [tileTwoSad, setTileTwoSad] = useState(false);
   const [tileThreeMad, setTileThreeMad] = useState(false);
-  const [middleMessage, setMessage] = useState("Hey!");
 
   useEffect(() => {}, []);
 
@@ -33,22 +32,36 @@ function App() {
     }
   }
 
+  function messageDisplay() {
+    if (tileOneHappy) {
+      return(
+        <div className={main.response}>That's good to hear!</div>
+      )   
+    }
+    else if (tileTwoSad) {
+      return(
+        <div className={main.response}>Are you sure you don't know?</div>
+      )
+    }
+    else if (tileThreeMad) {
+      return (
+        <div className={main.response}>Take a breath.</div>
+      )
+    }
+  }
   function happySelected() {
     setTileOneHappy(true);
-    setMessage("That's good to hear!")
     setTileTwoSad(false);
     setTileThreeMad(false);
   }
 
   function sadSelected() {
     setTileTwoSad(true);
-    setMessage("Are you sure you don't know?")
     setTileOneHappy(false);
     setTileThreeMad(false);
   }
   function madSelected() {
     setTileThreeMad(true);
-    setMessage("Take a breath.")
     setTileOneHappy(false);
     setTileTwoSad(false);
   }
@@ -63,7 +76,7 @@ function App() {
         happy={tileOneHappy}
         sad={tileTwoSad}
         mad={tileThreeMad}
-        message={middleMessage}
+        messageDisplay={messageDisplay}
       />
       <Tile3 />
     </div>
