@@ -8,25 +8,66 @@ import Tile4 from "./components/Tile4";
 
 function App() {
   const [expandedView, setExpandedView] = useState(false);
+  const [tileOneHappy, setTileOneHappy] = useState(false);
+  const [tileTwoSad, setTileTwoSad] = useState(false);
+  const [tileThreeMad, setTileThreeMad] = useState(false);
+  const [middleMessage, setMessage] = useState("Hey!");
+
   useEffect(() => {}, []);
 
   function expandView() {
     if (expandedView == false) {
       setExpandedView(true);
       document.documentElement.style.setProperty("--screen-height", "130%");
-      document.documentElement.style.setProperty("--slide", "translate(0%, -20%)");
+      document.documentElement.style.setProperty(
+        "--slide",
+        "translate(0%, -20%)"
+      );
     } else {
       setExpandedView(false);
       document.documentElement.style.setProperty("--screen-height", "50%");
-      document.documentElement.style.setProperty("--slide", "translate(0%, 0%)");
+      document.documentElement.style.setProperty(
+        "--slide",
+        "translate(0%, 0%)"
+      );
     }
+  }
+
+  function happySelected() {
+    setTileOneHappy(true);
+    setMessage("That's good to hear!")
+    setTileTwoSad(false);
+    setTileThreeMad(false);
+    console.log(tileOneHappy);
+  }
+
+  function sadSelected() {
+    setTileTwoSad(true);
+    setMessage("Are you sure you don't know?")
+    setTileOneHappy(false);
+    setTileThreeMad(false);
+    console.log(tileOneHappy);
+  }
+  function madSelected() {
+    setTileThreeMad(true);
+    setMessage("Take a breath.")
+    setTileOneHappy(false);
+    setTileTwoSad(false);
+    console.log(tileOneHappy);
   }
 
   return (
     <div className={main.sections}>
-      <Tile />
+      <Tile happy={happySelected} sad={sadSelected} mad={madSelected} />
       <Tile2 />
-      <MainScreen expand={expandView} expanded={expandedView} />
+      <MainScreen
+        expand={expandView}
+        expanded={expandedView}
+        happy={tileOneHappy}
+        sad={tileTwoSad}
+        mad={tileThreeMad}
+        message={middleMessage}
+      />
       <Tile3 />
     </div>
   );

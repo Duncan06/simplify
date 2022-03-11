@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import classes from "./Tile.module.css";
 
-function Tile() {
+function Tile(props) {
   useEffect(() => {
     const color = getComputedStyle(document.documentElement).getPropertyValue(
       "--tile-color"
@@ -20,6 +20,7 @@ function Tile() {
     elem.innerHTML = "I don't know.";
     var elem = document.getElementById("buttonThree");
     elem.innerHTML = "Not so great.";
+    props.happy();
   }
 
   function changeBlue() {
@@ -30,6 +31,7 @@ function Tile() {
     elem.innerHTML = "🥺";
     var elem = document.getElementById("buttonThree");
     elem.innerHTML = "Not so great.";
+    props.sad();
   }
 
   function changeRed() {
@@ -40,6 +42,7 @@ function Tile() {
     elem.innerHTML = "I don't know.";
     var elem = document.getElementById("buttonThree");
     elem.innerHTML = "😑";
+    props.mad();
   }
 
   return (
