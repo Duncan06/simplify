@@ -7,7 +7,7 @@ function mainScreen(props) {
     <div className={classes.contents}>
       <div className={classes.backDrop}>
         <div className={classes.innerObject}>
-          <p>{props.message}</p>
+          <div className={classes.response}>{props.message}</div>
         </div>
         <div className={classes.button}>
           <button onClick={props.expand}>Expand</button>
