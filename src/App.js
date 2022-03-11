@@ -38,7 +38,6 @@ function App() {
     setMessage("That's good to hear!")
     setTileTwoSad(false);
     setTileThreeMad(false);
-    console.log(tileOneHappy);
   }
 
   function sadSelected() {
@@ -46,14 +45,12 @@ function App() {
     setMessage("Are you sure you don't know?")
     setTileOneHappy(false);
     setTileThreeMad(false);
-    console.log(tileOneHappy);
   }
   function madSelected() {
     setTileThreeMad(true);
     setMessage("Take a breath.")
     setTileOneHappy(false);
     setTileTwoSad(false);
-    console.log(tileOneHappy);
   }
 
   return (
