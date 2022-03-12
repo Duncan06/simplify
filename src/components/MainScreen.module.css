@@ -68,3 +68,74 @@
   box-shadow: inset 0px 0px 10px #c1c1c1;
   transition: 0.3s ease-in;
 }
+
+.response {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ac3ff;
+  grid-column: 1;
+  grid-row: 1/2;
+  border-radius: 10% 10% 10% 10%;
+  width: 10rem;
+  height: 3rem;
+  margin: 0% 0% 0% 10%;
+  animation: 
+    slideIn 2s cubic-bezier(0.075, 0.82, 0.165, 1), 
+    transparency 1.5s ease-in;
+}
+
+.music {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ac3ff;
+  grid-column: 2;
+  grid-row: 1/2;
+  border-radius: 10% 10% 10% 10%;
+  width: 10rem;
+  height: 3rem;
+  margin: 0% 0% 0% 10%;
+  animation: 
+    slideIn2 2s cubic-bezier(0.075, 0.82, 0.165, 1), 
+    transparency 1.5s ease-in;
+}
+
+.musicOption {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  grid-column: 1;
+  grid-row:2/3;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 300%;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+
+@keyframes slideIn2 {
+  from {
+    margin-left: 200%;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+
+@keyframes transparency {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
