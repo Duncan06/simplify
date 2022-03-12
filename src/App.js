@@ -48,6 +48,11 @@ function App() {
         <div className={main.response}>Take a breath.</div>
       )
     }
+    else {
+      return (
+        <div className={main.response}>Hey!</div>
+      )
+    }
   }
   function happySelected() {
     setTileOneHappy(true);
