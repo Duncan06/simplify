@@ -32,28 +32,6 @@ function App() {
     }
   }
 
-  function messageDisplay() {
-    if (tileOneHappy) {
-      return(
-        <div className={main.response}>That's good to hear!</div>
-      )   
-    }
-    else if (tileTwoSad) {
-      return(
-        <div className={main.response}>Are you sure you don't know?</div>
-      )
-    }
-    else if (tileThreeMad) {
-      return (
-        <div className={main.response}>Take a breath.</div>
-      )
-    }
-    else {
-      return (
-        <div className={main.response}>Hey!</div>
-      )
-    }
-  }
   function happySelected() {
     setTileOneHappy(true);
     setTileTwoSad(false);
@@ -81,7 +59,6 @@ function App() {
         happy={tileOneHappy}
         sad={tileTwoSad}
         mad={tileThreeMad}
-        messageDisplay={messageDisplay}
       />
       <Tile3 />
     </div>
