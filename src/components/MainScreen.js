@@ -8,9 +8,7 @@ function mainScreen(props) {
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
           <div className={classes.music}>Want to listen to some music?</div>
-          <div className={classes.musicOption}>
-            <a href="https://music.youtube.com/">Youtube Music</a>
-          </div>
+          <a className={classes.musicOption} href="https://music.youtube.com/" target="_blank">Youtube Music</a>
         </div>
       );
     } else if (props.sad) {
