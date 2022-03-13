@@ -3,15 +3,24 @@ import classes from "./MainScreen.module.css";
 
 function mainScreen(props) {
   function messageDisplay() {
-    if (props.happy) {
+    if (props.happy && props.expanded) {
+      return (
+        <div className={classes.innerObject}>
+          <div className={classes.response}>That's good to hear!</div>
+          <div className={classes.music}>Want to listen to some music?</div>
+          <a className={classes.musicOptionExpanded} href="https://music.youtube.com/" target="_blank">Youtube Music</a>
+        </div>
+      );
+    } else if (props.happy) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
           <div className={classes.music}>Want to listen to some music?</div>
           <a className={classes.musicOption} href="https://music.youtube.com/" target="_blank">Youtube Music</a>
         </div>
-      );
-    } else if (props.sad) {
+      )
+    }
+     else if (props.sad) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>Are you sure you don't know?</div>
