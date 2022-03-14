@@ -15,6 +15,13 @@ function mainScreen(props) {
           >
             Youtube Music
           </a>
+          <a
+            className={classes.musicOption2Expanded}
+            href="https://open.spotify.com/"
+            target="_blank"
+          >
+            Spotify
+          </a>
         </div>
       );
     } else if (props.stillHappy && !props.expanded) {
@@ -31,6 +38,13 @@ function mainScreen(props) {
           >
             Youtube Music
           </a>
+          <a
+            className={classes.musicOption2Unexpand}
+            href="https://open.spotify.com/"
+            target="_blank"
+          >
+            Spotify
+          </a>
         </div>
       );
     } else if (props.happy) {
@@ -44,6 +58,13 @@ function mainScreen(props) {
             target="_blank"
           >
             Youtube Music
+          </a>
+          <a
+            className={classes.musicOption2}
+            href="https://open.spotify.com/"
+            target="_blank"
+          >
+            Spotify
           </a>
         </div>
       );
