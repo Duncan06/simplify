@@ -8,7 +8,29 @@ function mainScreen(props) {
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
           <div className={classes.music}>Want to listen to some music?</div>
-          <a className={classes.musicOptionExpanded} href="https://music.youtube.com/" target="_blank">Youtube Music</a>
+          <a
+            className={classes.musicOptionExpanded}
+            href="https://music.youtube.com/"
+            target="_blank"
+          >
+            Youtube Music
+          </a>
+        </div>
+      );
+    } else if (props.stillHappy && !props.expanded) {
+      return (
+        <div className={classes.innerObject}>
+          <div className={classes.response}>That's good to hear!</div>
+          <div className={classes.musicUnexpanded}>
+            Want to listen to some music?
+          </div>
+          <a
+            className={classes.musicOptionUnexpand}
+            href="https://music.youtube.com/"
+            target="_blank"
+          >
+            Youtube Music
+          </a>
         </div>
       );
     } else if (props.happy) {
@@ -16,11 +38,16 @@ function mainScreen(props) {
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
           <div className={classes.music}>Want to listen to some music?</div>
-          <a className={classes.musicOption} href="https://music.youtube.com/" target="_blank">Youtube Music</a>
+          <a
+            className={classes.musicOption}
+            href="https://music.youtube.com/"
+            target="_blank"
+          >
+            Youtube Music
+          </a>
         </div>
-      )
-    }
-     else if (props.sad) {
+      );
+    } else if (props.sad) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>Are you sure you don't know?</div>
