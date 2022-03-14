@@ -19,7 +19,9 @@ function App() {
   function expandView() {
     if (expandedView == false) {
       setExpandedView(true);
-      setPreviousHappy(true);
+      if (tileOneHappy) {
+        setPreviousHappy(true);
+      }
       document.documentElement.style.setProperty("--screen-height", "130%");
       document.documentElement.style.setProperty(
         "--slide",
