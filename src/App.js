@@ -55,12 +55,14 @@ function App() {
     setTileTwoSad(true);
     setTileOneHappy(false);
     setTileThreeMad(false);
+    setPreviousHappy(false);
     setSecondPreviousHappy(false);
   }
   function madSelected() {
     setTileThreeMad(true);
     setTileOneHappy(false);
     setTileTwoSad(false);
+    setPreviousHappy(false);
     setSecondPreviousHappy(false);
   }
 
