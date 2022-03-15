@@ -191,9 +191,9 @@
   margin: 0% 0% 0% 3.5%;
   grid-column: 1/4;
   grid-row: 2/3;
-  transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.055);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  animation: slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
+  animation: grow 2s, 
+    slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
 }
 
 .musicOptionUnexpand {
@@ -270,9 +270,11 @@
   margin: 0% 0% 0% 3.5%;
   grid-column: 1/4;
   grid-row: 3/4;
-  transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.055);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  animation: slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
+  /* Works with transition, but not with grow like musicOption1 */
+  /* transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.055); */
+  animation: grow 2s, 
+    slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
 }
 
 .musicOption2Expanded:hover {
@@ -344,6 +346,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0%{
+  }
+  100% {
+    transition: 2s cubic-bezier(0.175, 0.885, 0.32, 1.055);
   }
 }
 
