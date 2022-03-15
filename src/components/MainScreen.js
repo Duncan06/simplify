@@ -6,8 +6,8 @@ function mainScreen(props) {
     if (props.happy && props.expanded) {
       return (
         <div className={classes.innerObject}>
-          <div className={classes.response}>That's good to hear!</div>
-          <div className={classes.music}>Want to listen to some music?</div>
+          <div className={classes.responseExpandedOrUnexpanded}>That's good to hear!</div>
+          <div className={classes.musicExpandedOrUnexpanded}>Want to listen to some music?</div>
           <a
             className={classes.musicOptionExpanded}
             href="https://music.youtube.com/"
@@ -27,8 +27,8 @@ function mainScreen(props) {
     } else if (props.stillHappy && !props.expanded) {
       return (
         <div className={classes.innerObject}>
-          <div className={classes.response}>That's good to hear!</div>
-          <div className={classes.musicUnexpanded}>
+          <div className={classes.responseExpandedOrUnexpanded}>That's good to hear!</div>
+          <div className={classes.musicExpandedOrUnexpanded}>
             Want to listen to some music?
           </div>
           <a

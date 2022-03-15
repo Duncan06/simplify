@@ -85,6 +85,20 @@
     transparency 1.5s ease-in;
 }
 
+.responseExpandedOrUnexpanded {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ac3ff;
+  grid-column: 1;
+  grid-row: 1/2;
+  border-radius: 10% 10% 10% 10%;
+  width: 10rem;
+  height: 3rem;
+  margin: 0% 0% 0% 10%;
+}
+
 .music {
   align-self: center;
   display: flex;
@@ -101,7 +115,7 @@
     transparency 1.5s ease-in;
 }
 
-.musicUnexpanded {
+.musicExpandedOrUnexpanded {
   align-self: center;
   display: flex;
   align-items: center;
