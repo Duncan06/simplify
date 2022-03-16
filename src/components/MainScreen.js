@@ -6,17 +6,17 @@ function mainScreen(props) {
     if (props.happy && props.expanded) {
       return (
         <div className={classes.innerObject}>
-          <div className={classes.responseExpandedOrUnexpanded}>That's good to hear!</div>
-          <div className={classes.musicExpandedOrUnexpanded}>Want to listen to some music?</div>
+          <div className={classes.response}>That's good to hear!</div>
+          <div className={`${classes.response} ${classes.music}`}>Want to listen to some music?</div>
           <a
-            className={classes.musicOptionExpanded}
+            className={`${classes.musicButton} ${classes.musicOption} ${classes.optionExpand} ${classes.musicOptionExpanded}`}
             href="https://music.youtube.com/"
             target="_blank"
           >
             Youtube Music
           </a>
           <a
-            className={classes.musicOption2Expanded}
+            className={`${classes.musicButton} ${classes.musicOption2} ${classes.optionExpand} ${classes.musicOption2Expanded}`}
             href="https://open.spotify.com/"
             target="_blank"
           >
@@ -27,19 +27,19 @@ function mainScreen(props) {
     } else if (props.stillHappy && !props.expanded) {
       return (
         <div className={classes.innerObject}>
-          <div className={classes.responseExpandedOrUnexpanded}>That's good to hear!</div>
-          <div className={classes.musicExpandedOrUnexpanded}>
+          <div className={classes.response}>That's good to hear!</div>
+          <div className={`${classes.response} ${classes.music}`}>
             Want to listen to some music?
           </div>
           <a
-            className={classes.musicOptionUnexpand}
+            className={`${classes.musicButton} ${classes.musicOption} ${classes.musicOptionUnexpand}`}
             href="https://music.youtube.com/"
             target="_blank"
           >
             Youtube Music
           </a>
           <a
-            className={classes.musicOption2Unexpand}
+            className={`${classes.musicButton} ${classes.musicOption2} ${classes.musicOption2Unexpand}`}
             href="https://open.spotify.com/"
             target="_blank"
           >
@@ -51,16 +51,16 @@ function mainScreen(props) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
-          <div className={classes.music}>Want to listen to some music?</div>
+          <div className={`${classes.response} ${classes.music} ${classes.slideIn}`}>Want to listen to some music?</div>
           <a
-            className={classes.musicOption}
+            className={`${classes.musicButton} ${classes.musicOption}`}
             href="https://music.youtube.com/"
             target="_blank"
           >
             Youtube Music
           </a>
           <a
-            className={classes.musicOption2}
+            className={`${classes.musicButton} ${classes.musicOption2}`}
             href="https://open.spotify.com/"
             target="_blank"
           >
@@ -83,7 +83,7 @@ function mainScreen(props) {
     } else {
       return (
         <div className={classes.innerObject}>
-          <div className={classes.response}>Hey!</div>
+          <div className={`${classes.response} ${classes.slideIn}`}>Hey!</div>
         </div>
       );
     }
