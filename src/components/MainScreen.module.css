@@ -146,10 +146,12 @@
   background-color: rgb(41, 207, 19);
   grid-column: 2;
   grid-row: 2/3;
+}
+
+.musicOption2Default {
   animation: slideIn 2s cubic-bezier(0.075, 0.82, 0.165, 1),
     transparency 1.5s ease-in;
 }
-
 .musicOption2:hover {
   background-color: rgb(217, 250, 204);
   transition: 0.7s ease-in;

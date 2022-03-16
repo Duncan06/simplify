@@ -60,7 +60,7 @@ function mainScreen(props) {
             Youtube Music
           </a>
           <a
-            className={`${classes.musicButton} ${classes.musicOption2}`}
+            className={`${classes.musicButton} ${classes.musicOption2} ${classes.musicOption2Default}`}
             href="https://open.spotify.com/"
             target="_blank"
           >
