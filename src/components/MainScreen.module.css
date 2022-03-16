@@ -45,8 +45,7 @@
   border: none;
   font-size: 1rem;
   padding: 0.5rem;
-  margin: 20% 0.5rem 0 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 20% 0.5rem 0.5rem 0.5rem;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   background-color: #2ac3ff;
   border-radius: 10%;
@@ -169,7 +168,6 @@
 .musicOption2Unexpand {
   animation: ungrow2 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.055);
 }
-
 
 @keyframes slideIn {
   from {
