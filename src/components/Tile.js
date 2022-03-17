@@ -16,65 +16,36 @@ function Tile(props) {
     if (props.happyNow) {
       return (
         <div className={classes.buttons}>
-          <button onClick={changeGreen}>
-            😁
-          </button>
-          <button onClick={changeBlue}>
-            I don't know.
-          </button>
-          <button onClick={changeRed}>
-            Not so great.
-          </button>
+          <button onClick={changeGreen}>😁</button>
+          <button onClick={changeBlue}>I don't know.</button>
+          <button onClick={changeRed}>Not so great.</button>
+        </div>
+      );
+    } else if (props.sadNow) {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>Well!</button>
+          <button onClick={changeBlue}>🥺</button>
+          <button onClick={changeRed}>Not so great.</button>
+        </div>
+      );
+    } else if (props.madNow) {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>Well!</button>
+          <button onClick={changeBlue}>I don't know.</button>
+          <button onClick={changeRed}>😑</button>
+        </div>
+      );
+    } else {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>Well!</button>
+          <button onClick={changeBlue}>I don't know.</button>
+          <button onClick={changeRed}>Not so great.</button>
         </div>
       );
     }
-    else if (props.sadNow) {
-      return (
-        <div className={classes.buttons}>
-          <button onClick={changeGreen}>
-            Well!
-          </button>
-          <button onClick={changeBlue}>
-            🥺
-          </button>
-          <button onClick={changeRed}>
-            Not so great.
-          </button>
-        </div>
-      )
-    }
-    else if (props.madNow) {
-      return (
-        <div className={classes.buttons}>
-          <button onClick={changeGreen}>
-            Well!
-          </button>
-          <button onClick={changeBlue}>
-            I don't know.
-          </button>
-          <button onClick={changeRed}>
-            😑
-          </button>
-        </div>
-      )
-    }
-    else {
-      return (
-        <div className={classes.buttons}>
-          <button onClick={changeGreen}>
-            Well!
-          </button>
-          <button onClick={changeBlue}>
-            I don't know.
-          </button>
-          <button onClick={changeRed}>
-            Not so great.
-          </button>
-        </div>
-      );
-    }
-
-
   }
 
   function changeGreen() {
