@@ -31,8 +31,7 @@ function App() {
       setExpandedView(false);
       if (previousHappy) {
         setSecondPreviousHappy(true);
-      }
-      else {
+      } else {
         setSecondPreviousHappy(false);
       }
       setPreviousHappy(false);
@@ -68,7 +67,14 @@ function App() {
 
   return (
     <div className={main.sections}>
-      <Tile happy={happySelected} sad={sadSelected} mad={madSelected} />
+      <Tile
+        happy={happySelected}
+        sad={sadSelected}
+        mad={madSelected}
+        happyNow={tileOneHappy}
+        sadNow={tileTwoSad}
+        madNow={tileThreeMad}
+      />
       <Tile2 />
       <MainScreen
         expand={expandView}

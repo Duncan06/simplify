@@ -12,53 +12,90 @@ function Tile(props) {
     document.documentElement.style.setProperty("--tile-color", color);
   }
 
+  function selection() {
+    if (props.happyNow) {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>
+            😁
+          </button>
+          <button onClick={changeBlue}>
+            I don't know.
+          </button>
+          <button onClick={changeRed}>
+            Not so great.
+          </button>
+        </div>
+      );
+    }
+    else if (props.sadNow) {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>
+            Well!
+          </button>
+          <button onClick={changeBlue}>
+            🥺
+          </button>
+          <button onClick={changeRed}>
+            Not so great.
+          </button>
+        </div>
+      )
+    }
+    else if (props.madNow) {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>
+            Well!
+          </button>
+          <button onClick={changeBlue}>
+            I don't know.
+          </button>
+          <button onClick={changeRed}>
+            😑
+          </button>
+        </div>
+      )
+    }
+    else {
+      return (
+        <div className={classes.buttons}>
+          <button onClick={changeGreen}>
+            Well!
+          </button>
+          <button onClick={changeBlue}>
+            I don't know.
+          </button>
+          <button onClick={changeRed}>
+            Not so great.
+          </button>
+        </div>
+      );
+    }
+
+
+  }
+
   function changeGreen() {
     setColor("#2afd22");
-    var elem = document.getElementById("buttonOne");
-    elem.innerHTML = "😁";
-    var elem = document.getElementById("buttonTwo");
-    elem.innerHTML = "I don't know.";
-    var elem = document.getElementById("buttonThree");
-    elem.innerHTML = "Not so great.";
     props.happy();
   }
 
   function changeBlue() {
     setColor("#22b8fd");
-    var elem = document.getElementById("buttonOne");
-    elem.innerHTML = "Well!";
-    var elem = document.getElementById("buttonTwo");
-    elem.innerHTML = "🥺";
-    var elem = document.getElementById("buttonThree");
-    elem.innerHTML = "Not so great.";
     props.sad();
   }
 
   function changeRed() {
     setColor("#ff7aad");
-    var elem = document.getElementById("buttonOne");
-    elem.innerHTML = "Well!";
-    var elem = document.getElementById("buttonTwo");
-    elem.innerHTML = "I don't know.";
-    var elem = document.getElementById("buttonThree");
-    elem.innerHTML = "😑";
     props.mad();
   }
 
   return (
     <div className={classes.tile}>
       <h3>How's it going?</h3>
-      <div className={classes.buttons}>
-        <button onClick={changeGreen} id="buttonOne">
-          Well!
-        </button>
-        <button onClick={changeBlue} id="buttonTwo">
-          I don't know.
-        </button>
-        <button onClick={changeRed} id="buttonThree">
-          Not so great.
-        </button>
-      </div>
+      {selection()}
     </div>
   );
 }
