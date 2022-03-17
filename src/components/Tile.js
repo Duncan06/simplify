@@ -12,6 +12,21 @@ function Tile(props) {
     document.documentElement.style.setProperty("--tile-color", color);
   }
 
+  function changeGreen() {
+    setColor("#2afd22");
+    props.happy();
+  }
+
+  function changeBlue() {
+    setColor("#22b8fd");
+    props.sad();
+  }
+
+  function changeRed() {
+    setColor("#ff7aad");
+    props.mad();
+  }
+
   function selection() {
     if (props.happyNow) {
       return (
@@ -46,21 +61,6 @@ function Tile(props) {
         </div>
       );
     }
-  }
-
-  function changeGreen() {
-    setColor("#2afd22");
-    props.happy();
-  }
-
-  function changeBlue() {
-    setColor("#22b8fd");
-    props.sad();
-  }
-
-  function changeRed() {
-    setColor("#ff7aad");
-    props.mad();
   }
 
   return (
