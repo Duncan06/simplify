@@ -1,13 +1,6 @@
-import { useEffect } from "react";
 import classes from "./Tile.module.css";
 
 function Tile(props) {
-  useEffect(() => {
-    const color = getComputedStyle(document.documentElement).getPropertyValue(
-      "--tile-color"
-    );
-  }, []);
-
   function setColor(color) {
     document.documentElement.style.setProperty("--tile-color", color);
   }
