@@ -215,6 +215,7 @@
   }
 }
 
+/* Fix slide transition up */
 @keyframes ungrow2 {
   0% {
     height: 3rem;
@@ -233,9 +234,11 @@
 
   60% {
     transform: translate(100%, 0%);
+    grid-column: 1;
+    grid-row: 2/4;
   }
 
   80% {
-    transform: translate(0%, -100%);
+    transform: translate(0%, 100%);
   }
 }
