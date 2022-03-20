@@ -12,7 +12,9 @@ function App() {
   const [previousHappy, setPreviousHappy] = useState(false);
   const [secondPreviousHappy, setSecondPreviousHappy] = useState(false);
   const [tileTwoSad, setTileTwoSad] = useState(false);
+  const [previousSad, setPreviousSad] = useState(false);
   const [tileThreeMad, setTileThreeMad] = useState(false);
+  const [previousMad, setPreviousMad] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -21,6 +23,12 @@ function App() {
       setExpandedView(true);
       if (tileOneHappy) {
         setPreviousHappy(true);
+      }
+      if (tileTwoSad) {
+        setPreviousSad(true);
+      }
+      if (tileThreeMad) {
+        setPreviousMad(true);
       }
       document.documentElement.style.setProperty("--screen-height", "130%");
       document.documentElement.style.setProperty(
@@ -80,9 +88,12 @@ function App() {
         expand={expandView}
         expanded={expandedView}
         happy={tileOneHappy}
+        wasHappy={previousHappy}
         stillHappy={secondPreviousHappy}
         sad={tileTwoSad}
+        wasSad={previousSad}
         mad={tileThreeMad}
+        wasMad={previousMad}
       />
       <Tile3 />
     </div>
