@@ -68,7 +68,7 @@ function mainScreen(props) {
           </a>
         </div>
       );
-    } else if (props.sad && props.previousMad || props.previousHappy) {
+    } else if (props.sad && props.wasMad || props.wasHappy) {
       return(
         <div></div>
       );
