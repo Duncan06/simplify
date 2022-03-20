@@ -11,14 +11,14 @@ function App() {
   const [tileTwoSad, setTileTwoSad] = useState(false);
   const [tileThreeMad, setTileThreeMad] = useState(false);
   const item = localStorage.getItem("spaceArray");
-  const [loadedPics, setLoadedPics] = useState(item ? JSON.parse(item) : []);
+  const [loadedPic, setLoadedPic] = useState(item ? JSON.parse(item) : []);
 
   useEffect(() => {
     SpacePic();
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("spaceArray", JSON.stringify(loadedPics));
+    localStorage.setItem("spaceArray", JSON.stringify(loadedPic));
   });
   
   
@@ -28,7 +28,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        setLoadedPics([...loadedPics, data]);
+        setLoadedPic([...loadedPic, data]);
       });
   }
 
@@ -84,7 +84,7 @@ function App() {
         happy={tileOneHappy}
         sad={tileTwoSad}
         mad={tileThreeMad}
-        spacePics={loadedPics}
+        spacePic={loadedPic}
       />
       <Tile3 />
     </div>
