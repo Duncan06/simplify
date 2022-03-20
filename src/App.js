@@ -9,27 +9,14 @@ import Tile4 from "./components/Tile4";
 function App() {
   const [expandedView, setExpandedView] = useState(false);
   const [tileOneHappy, setTileOneHappy] = useState(false);
-  const [previousHappy, setPreviousHappy] = useState(false);
-  const [secondPreviousHappy, setSecondPreviousHappy] = useState(false);
   const [tileTwoSad, setTileTwoSad] = useState(false);
-  const [previousSad, setPreviousSad] = useState(false);
   const [tileThreeMad, setTileThreeMad] = useState(false);
-  const [previousMad, setPreviousMad] = useState(false);
 
   useEffect(() => {}, []);
 
   function expandView() {
     if (expandedView == false) {
       setExpandedView(true);
-      if (tileOneHappy) {
-        setPreviousHappy(true);
-      }
-      if (tileTwoSad) {
-        setPreviousSad(true);
-      }
-      if (tileThreeMad) {
-        setPreviousMad(true);
-      }
       document.documentElement.style.setProperty("--screen-height", "130%");
       document.documentElement.style.setProperty(
         "--slide",
@@ -37,12 +24,6 @@ function App() {
       );
     } else {
       setExpandedView(false);
-      if (previousHappy) {
-        setSecondPreviousHappy(true);
-      } else {
-        setSecondPreviousHappy(false);
-      }
-      setPreviousHappy(false);
       document.documentElement.style.setProperty("--screen-height", "50%");
       document.documentElement.style.setProperty(
         "--slide",
@@ -55,22 +36,17 @@ function App() {
     setTileOneHappy(true);
     setTileTwoSad(false);
     setTileThreeMad(false);
-    setSecondPreviousHappy(false);
   }
 
   function sadSelected() {
     setTileTwoSad(true);
     setTileOneHappy(false);
     setTileThreeMad(false);
-    setPreviousHappy(false);
-    setSecondPreviousHappy(false);
   }
   function madSelected() {
     setTileThreeMad(true);
     setTileOneHappy(false);
     setTileTwoSad(false);
-    setPreviousHappy(false);
-    setSecondPreviousHappy(false);
   }
 
   return (
@@ -88,12 +64,8 @@ function App() {
         expand={expandView}
         expanded={expandedView}
         happy={tileOneHappy}
-        wasHappy={previousHappy}
-        stillHappy={secondPreviousHappy}
         sad={tileTwoSad}
-        wasSad={previousSad}
         mad={tileThreeMad}
-        wasMad={previousMad}
       />
       <Tile3 />
     </div>

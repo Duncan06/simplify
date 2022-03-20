@@ -138,9 +138,10 @@
   animation: slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
 }
 
-.musicOptionUnexpand {
+/* Removed animation */
+/* .musicOptionUnexpand {
   animation: ungrow 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.055);
-}
+} */
 
 .musicOption2 {
   background-color: rgb(41, 207, 19);
@@ -167,9 +168,10 @@
   animation: slideRight 2s cubic-bezier(0.215, 0.61, 0.355, 4);
 }
 
-.musicOption2Unexpand {
+/* Removed animation */
+/* .musicOption2Unexpand {
   animation: ungrow2 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.055);
-}
+} */
 
 @keyframes slideIn {
   from {
@@ -198,7 +200,8 @@
   }
 }
 
-@keyframes ungrow {
+/* Remove for now due to visual conflicts */
+/* @keyframes ungrow {
   from {
     height: 3rem;
     width: 30rem;
@@ -213,10 +216,11 @@
     grid-column: 1;
     grid-row: 2/3;
   }
-}
+} */
 
-/* Fix slide transition up */
-@keyframes ungrow2 {
+
+/* Remove until fix slide transition up, does not stay in place */
+/* @keyframes ungrow2 {
   0% {
     height: 3rem;
     width: 30rem;
@@ -240,5 +244,5 @@
 
   80% {
     transform: translate(0%, 100%);
-  }
-}
+  } 
+} */

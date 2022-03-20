@@ -68,10 +68,6 @@ function mainScreen(props) {
           </a>
         </div>
       );
-    } else if (props.sad && props.wasMad || props.wasHappy) {
-      return(
-        <div></div>
-      );
     } else if (props.sad) {
       return (
         <div className={classes.innerObject}>
