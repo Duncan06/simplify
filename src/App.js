@@ -10,8 +10,27 @@ function App() {
   const [tileOneHappy, setTileOneHappy] = useState(false);
   const [tileTwoSad, setTileTwoSad] = useState(false);
   const [tileThreeMad, setTileThreeMad] = useState(false);
+  const item = localStorage.getItem("spaceArray");
+  const [loadedPics, setLoadedPics] = useState(item ? JSON.parse(item) : []);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    SpacePic();
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("spaceArray", JSON.stringify(loadedPics));
+  });
+  
+  
+  function SpacePic() {
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setLoadedPics([...loadedPics, data]);
+      });
+  }
 
   function expandView() {
     if (expandedView == false) {
@@ -65,6 +84,7 @@ function App() {
         happy={tileOneHappy}
         sad={tileTwoSad}
         mad={tileThreeMad}
+        spacePics={loadedPics}
       />
       <Tile3 />
     </div>

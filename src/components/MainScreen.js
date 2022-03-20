@@ -54,6 +54,11 @@ function mainScreen(props) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>Are you sure you don't know?</div>
+          <div
+            className={`${classes.response} ${classes.music} ${classes.slideIn}`}
+          >
+            Maybe you should reach out to a friend.
+          </div>
         </div>
       );
     } else if (props.mad) {
