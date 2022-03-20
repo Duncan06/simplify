@@ -4,7 +4,6 @@ import Tile from "./components/Tile";
 import Tile2 from "./components/Tile2";
 import Tile3 from "./components/Tile3";
 import MainScreen from "./components/MainScreen";
-import Tile4 from "./components/Tile4";
 
 function App() {
   const [expandedView, setExpandedView] = useState(false);

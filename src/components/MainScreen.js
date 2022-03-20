@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import classes from "./MainScreen.module.css";
 
 function mainScreen(props) {
@@ -7,7 +6,9 @@ function mainScreen(props) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
-          <div className={`${classes.response} ${classes.music}`}>Want to listen to some music?</div>
+          <div className={`${classes.response} ${classes.music}`}>
+            Want to listen to some music?
+          </div>
           <a
             className={`${classes.musicButton} ${classes.musicOption} ${classes.optionExpand} ${classes.musicOptionExpanded}`}
             href="https://music.youtube.com/"
@@ -24,34 +25,15 @@ function mainScreen(props) {
           </a>
         </div>
       );
-    } else if (props.stillHappy && !props.expanded) {
-      return (
-        <div className={classes.innerObject}>
-          <div className={classes.response}>That's good to hear!</div>
-          <div className={`${classes.response} ${classes.music}`}>
-            Want to listen to some music?
-          </div>
-          <a
-            className={`${classes.musicButton} ${classes.musicOption} ${classes.musicOptionUnexpand}`}
-            href="https://music.youtube.com/"
-            target="_blank"
-          >
-            Youtube Music
-          </a>
-          <a
-            className={`${classes.musicButton} ${classes.musicOption2} ${classes.musicOption2Unexpand}`}
-            href="https://open.spotify.com/"
-            target="_blank"
-          >
-            Spotify
-          </a>
-        </div>
-      );
     } else if (props.happy) {
       return (
         <div className={classes.innerObject}>
           <div className={classes.response}>That's good to hear!</div>
-          <div className={`${classes.response} ${classes.music} ${classes.slideIn}`}>Want to listen to some music?</div>
+          <div
+            className={`${classes.response} ${classes.music} ${classes.slideIn}`}
+          >
+            Want to listen to some music?
+          </div>
           <a
             className={`${classes.musicButton} ${classes.musicOption}`}
             href="https://music.youtube.com/"
