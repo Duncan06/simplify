@@ -50,6 +50,20 @@ function mainScreen(props) {
           </a>
         </div>
       );
+    } else if (props.sad && props.expanded) {
+      return (
+        <div className={classes.innerObject}>
+          <div className={classes.response}>Are you sure you don't know?</div>
+          <div
+            className={`${classes.response} ${classes.music} ${classes.slideIn}`}
+          >
+            Maybe you should reach out to a friend.
+          </div>
+          <div className={classes.spaceContainer}> 
+            <img className={classes.space} src={`${props.spacePic[0].url}`} />
+          </div>
+        </div>
+      );
     } else if (props.sad) {
       return (
         <div className={classes.innerObject}>

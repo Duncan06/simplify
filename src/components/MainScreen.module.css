@@ -173,6 +173,23 @@
   animation: ungrow2 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.055);
 } */
 
+.spaceContainer {
+  grid-column: 1/5;
+  grid-row: 1/5;
+  display:grid;
+  overflow: hidden;
+}
+.space {
+  grid-column: 2/5;
+  grid-row: 3/5;
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: slideRight2 2s cubic-bezier(0.215, 0.61, 0.355, 1.5),
+    transparency 1.5s ease-in;
+}
+
 @keyframes slideIn {
   from {
     margin-left: 100%;
@@ -188,6 +205,15 @@
   }
   to {
     margin-left: 3.5%;
+  }
+}
+
+@keyframes slideRight2 {
+  from {
+    margin-left: -10%;
+  }
+  to {
+    margin-left: 0%;
   }
 }
 
