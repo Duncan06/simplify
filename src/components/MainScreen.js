@@ -62,6 +62,9 @@ function mainScreen(props) {
           <div className={classes.spaceContainer}> 
             <img className={classes.space} src={`${props.spacePic[0].url}`} />
           </div>
+          <div className={classes.picTitle}>
+            Title: {props.spacePic[0].title}
+          </div>
         </div>
       );
     } else if (props.sad) {
