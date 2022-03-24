@@ -18,14 +18,10 @@ function App() {
     localStorage.setItem("spaceArray", JSON.stringify(loadedPic));
   }, []);
   
-  function SpacePic() {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setLoadedPic([...loadedPic, data]);
-      });
+  async function SpacePic() {
+    const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+    const data = await res.json();
+    return setLoadedPic([...loadedPic, data]);
   }
 
   function expandView() {
