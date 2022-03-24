@@ -15,12 +15,8 @@ function App() {
 
   useEffect(() => {
     SpacePic();
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem("spaceArray", JSON.stringify(loadedPic));
-  });
-  
+  }, []);
   
   function SpacePic() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
